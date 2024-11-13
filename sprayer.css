@@ -1,0 +1,345 @@
+/* Reseta as configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+}
+
+/* Estilização da seção de dobra */
+.dobra {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    opacity: 0; /* Inicialmente invisível para animação */
+    transform: translateY(30px); /* Posição inicial para o efeito de subida */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animação de transição */
+}
+
+/* Fundo de céu para a 2ª Dobra */
+.dobral {
+    background: linear-gradient(to bottom, #d6f5ff, #5fff5085); /* Gradiente de azul claro para azul um pouco mais escuro */
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dobral::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://example.com/camadas-nuvens.png'); /* Substitua pela URL de uma imagem de nuvens suaves */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Opacidade para manter o efeito suave */
+    z-index: -1;
+}
+
+
+.dobra.aparecer {
+    opacity: 1; /* Visível após animação */
+    transform: translateY(0); /* Posição final */
+    
+}
+
+.dobra1 p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Fundo com imagem blur para a primeira e terceira dobra */
+.dobra1::before, .dobra3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+    opacity: 0.6;
+}
+.marca img {
+    height: 8vw; /* A altura será ajustada com base na largura da tela */
+    max-height: 80px; /* Limite de altura máxima para evitar que fique muito grande em telas maiores */
+    object-fit: contain; /* Garante que a imagem mantenha a proporção sem distorcer */
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Camada de escurecimento para melhor legibilidade */
+    padding: 60px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #00796B;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.headline, .subheadline, .btn {
+    animation: fadeIn 1.5s ease forwards;
+}
+.dobra1::before {
+    background-image: url('https://i.pinimg.com/736x/8d/cf/22/8dcf22599fb27090b5981e1a3388becd.jpg');
+}
+
+.dobra3::before {
+    background-image: url('https://oficinadoabada.com.br/wp-content/uploads/2024/03/fundo-plantacao-webp.webp');
+}
+
+/* Marca e título */
+.marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5em;
+    color: #004D40;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Headline e Subtítulos */
+h1, h2 {
+    color: #00796B;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2.titulo-espacado {
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Subtítulo na primeira dobra */
+.dobra1 h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Botão principal */
+.btn {
+    display: inline-block;
+    margin-top: 2px;
+    padding: 12px 30px;
+    color: #fff;
+    background-color: #00796B;
+    text-decoration: none;
+    border-radius: px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #004D40;
+    transform: scale(1.05);
+}
+
+/* Estilo dos cartões de benefícios */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os títulos dos cards */
+.cards .card h3 {
+    margin-bottom: 15px;
+    color: #00796B;
+    font-size: 1.4em;
+}
+
+.cards .card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Estilo para os ícones dos cards */
+.card-icon {
+    display: block;
+    width: 40px; /* Tamanho dos ícones */
+    height: auto;
+    margin-bottom: 10px;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(44%) saturate(400%) hue-rotate(110deg) brightness(95%) contrast(90%); /* Cor de #00796B */
+}
+
+/* Estilo dos cartões retangulares */
+.retangular-cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 520px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.retangular-cards .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.retangular-cards .card-content {
+    max-width: 70%;
+}
+
+.retangular-cards .card .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* Dobra cinza */
+.dobra-cinza {
+    background-color: #f9fafb;
+}
+
+/* Ajustes de cor e sombreamento na dobra 3 */
+.dobra3 ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dobra3 h2 {
+    color: #00796B;
+}
+
+/* Fundo verde pastel nas dobras 4 e 6 */
+.dobra4, .dobra6 {
+    background-color: #e2f1e1;
+}
+
+/* Ajuste no rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #68dcff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffcc80;
+}
+
+/* Nova Seção: Black Friday */
+.black-friday {
+    margin-top: 40px; /* Espaçamento acima da seção */
+    padding: 40px 20px;
+    background-image: url('https://img.freepik.com/fotos-gratis/fundo-elegante-perfeito-para-black-friday_1361-3600.jpg'); /* Substitua pela URL da sua imagem */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Inicialmente invisível para animação */
+    transform: translateY(30px); /* Posição inicial para o efeito de subida */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.black-friday.aparecer {
+    opacity: 1; /* Visível após animação */
+    transform: translateY(0); /* Posição final */
+}
+
+.black-friday h2 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.black-friday h3 {
+    font-size: 1.5em;
+    color: #ff0000; /* Vermelho */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.black-friday p {
+    font-size: 1em;
+    color: #ffffff; /* Vermelho */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Dobra 2, 4, e 6: Fundo com gradiente suave */
+.dobra2, .dobra-cinza, .dobra6 {
+    background: linear-gradient(to bottom left, #ffffff, #35a7009d);
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Redes Sociais */
+.social-links a {
+    color: #00796B;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    color: #004D40;
+}
+

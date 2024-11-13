@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="sprayer.css" media="screen" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprayer Drones - Pulverização de Precisão</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.dobra');
+        const cards = document.querySelectorAll('.cards');
+
+        const revealOnScroll = (elements, className) => {
+            elements.forEach(element => {
+                const topPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (topPosition < windowHeight - 100) {
+                    element.classList.add(className);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            revealOnScroll(sections, 'aparecer');
+            revealOnScroll(cards, 'aparecer');
+        });
+
+        // Exibe a primeira dobra ao carregar
+        document.querySelector('.dobra1').classList.add('aparecer');
+    });
+</script>
+
+<body>
+    <!-- 1ª Dobra: Marca e Headline -->
+    <section id="home" class="dobra dobra1">
+        <div class="overlay">
+        <h1 class="marca">
+            <img src="https://pbs.twimg.com/media/GcLuVcuWwAAsJ-S?format=png&name=360x360" alt="Logo Sprayer Drones" class="logo">
+            <img src="https://pbs.twimg.com/media/GcLyDqMWYAAaKlm?format=png&name=small" alt="Imagem adicional" class="imagem-adicional">
+        </h1>
+        <h2>Revolucione sua Colheita com Pulverização com Drones</h2>
+        <p>Mais Economia e cuidado com o meio ambiente: Pulverização aérea precisa e livre de amassamento, protegendo a qualidade do solo e aumentando a eficiência no campo.</p>
+        <a href="#produtos" class="btn">Serviços</a>
+
+        <!-- Nova Seção: Black Friday -->
+        <div class="black-friday dobra">
+            <h2>🤑💥BLACK FRIDAY💥🤑</h2>
+            <h3>Orce agora acima de 300 equitares e ganhe um software!!!</h3>
+            <p>Clique no "Serviços" acima e escolha.</p>
+        </div>
+        </div>
+    </section>
+
+   <!-- 2ª Dobra: Benefícios -->
+    <section id="beneficios" class="dobral">
+        <h2 class="titulo-espacado">Benefícios de Pulverização com Drones</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/GcNUOguXcAAzvKv?format=png&name=small" alt="Ícone Eficiência no uso de insumos" class="card-icon">
+                <h3>Eficiência no uso de insumos</h3>
+                <p>Redução significativa no consumo de produtos devido à aplicação precisa e uniforme.</p>
+            </div>
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/GcNUOgvXkAEI7ZG?format=png&name=240x240" alt="Ícone Redução do impacto ambiental" class="card-icon">
+                <h3>Redução do impacto ambiental</h3>
+                <p>Menos resíduos químicos e menor contaminação do solo e da água.</p>
+            </div>
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/GcNUOVJWAAA4QAq?format=png&name=360x360" alt="Ícone Cobertura uniforme e controle de altura" class="card-icon">
+                <h3>Cobertura uniforme e controle de altura</h3>
+                <p>Aplicação de produtos em altura constante, garantindo distribuição uniforme.</p>
+            </div>
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/GcNUOgsX0AA-mbR?format=png&name=240x240" alt="Ícone Livre de Amassamento" class="card-icon">
+                <h3>Livre de Amassamento</h3>
+                <p>Proteção do solo e das culturas, eliminando danos causados por maquinário pesado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outras dobras seguem o mesmo padrão -->
+
+    <!-- 3ª Dobra: Como Funciona -->
+    <section id="como-funciona" class="dobra dobra3">
+        <h2>Como funciona a Pulverização por Drone?</h2>
+        <ul>
+            <li><strong>Planejamento e Mapeamento:</strong> O drone realiza um mapeamento da área agrícola, utilizando sensores para identificar as necessidades de pulverização, garantindo uma aplicação precisa.</li>
+            <li><strong>Programação e Rota:</strong> O drone é programado para seguir uma rota definida, ajustando altura de voo e intensidade de pulverização conforme as características da lavoura.</li>
+            <li><strong>Pulverização:</strong> O drone aplica o insumo com precisão através de bicos controlados eletronicamente, garantindo uma distribuição eficiente nas plantas.</li>
+            <li><strong>Monitoramento em Tempo Real:</strong> Sensores no drone permitem o monitoramento da saúde das plantas, fornecendo dados que ajudam na tomada de decisões rápidas e eficazes.</li>
+        </ul>
+    </section>
+
+    <!-- 4ª Dobra: Produtos -->
+    <section id="produtos" class="dobra dobra-cinza">
+        <h2 class="titulo-espacado">Nossos Serviços de Pulverização</h2>
+        <div class="cards retangular-cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pulverização com Herbicidas</h3>
+                    <p>Aplicação de herbicidas específicos para controle de ervas daninhas sem afetar as culturas.</p>
+                </div>
+                <a href="https://wa.me/5562998554057?text=Gostaria%20de%20contratar%20o%20serviço%20de%20pulverização%20com%20herbicidas." class="btn">Contratar</a>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pulverização com Inseticidas</h3>
+                    <p>Controle preciso de pragas para melhorar a produtividade e proteger as plantações.</p>
+                </div>
+                <a href="https://wa.me/5562998554057?text=Gostaria%20de%20contratar%20o%20serviço%20de%20pulverização%20com%20inseticidas." class="btn">Contratar</a>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pulverização com Fungicidas</h3>
+                    <p>Proteção contra fungos e doenças que afetam a saúde das plantas e a qualidade da produção.</p>
+                </div>
+                <a href="https://wa.me/5562998554057?text=Gostaria%20de%20contratar%20o%20serviço%20de%20pulverização%20com%20fungicidas." class="btn">Contratar</a>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pulverização com Ureia, Sementes e Adubos</h3>
+                    <p>Nutrição precisa das plantas com fertilizantes e adubos específicos para cada necessidade.</p>
+                </div>
+                <a href="https://wa.me/5562998554057?text=Gostaria%20de%20contratar%20o%20serviço%20de%20pulverização%20com%20adubos." class="btn">Contratar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5ª Dobra: Prova Social -->
+    <section id="testemunhos" class="dobra">
+        <h2>Clientes Satisfeitos</h2>
+        <p>"Excelente serviço! Resultados visíveis na minha lavoura..."</p>
+        <p>"Tecnologia que trouxe mais segurança e eficiência."</p>
+    </section>
+
+   <!-- 6ª Dobra: CTA -->
+   <section id="contato" class="dobra dobra-cinza">
+    <div class="container">
+        <h2>Deseja melhorar o rendimento e a qualidade da sua pulverização?</h2>
+        <a href="https://wa.me/62998554057" class="btn">Fale Conosco</a>
+        <div class="social-links">
+            <a href="https://www.instagram.com/sprayerdrones/">Instagram</a> | 
+            <a href="https://www.facebook.com/sprayerdronesbr?locale=pt_BR">Facebook</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
