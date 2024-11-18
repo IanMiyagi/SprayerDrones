@@ -49,11 +49,9 @@ body {
     z-index: -1;
 }
 
-
 .dobra.aparecer {
     opacity: 1; /* Visível após animação */
     transform: translateY(0); /* Posição final */
-    
 }
 
 .dobra1 p {
@@ -78,11 +76,13 @@ body {
     z-index: -1;
     opacity: 0.6;
 }
+
 .marca img {
     height: 8vw; /* A altura será ajustada com base na largura da tela */
     max-height: 80px; /* Limite de altura máxima para evitar que fique muito grande em telas maiores */
     object-fit: contain; /* Garante que a imagem mantenha a proporção sem distorcer */
 }
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.6); /* Camada de escurecimento para melhor legibilidade */
     padding: 60px 20px;
@@ -92,6 +92,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .btn {
     display: inline-block;
     padding: 14px 32px;
@@ -104,13 +105,16 @@ body {
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .headline, .subheadline, .btn {
     animation: fadeIn 1.5s ease forwards;
 }
+
 .dobra1::before {
     background-image: url('https://i.pinimg.com/736x/8d/cf/22/8dcf22599fb27090b5981e1a3388becd.jpg');
 }
@@ -168,6 +172,25 @@ h2.titulo-espacado {
     background-color: #004D40;
     transform: scale(1.05);
 }
+/* Ajusta o botão na 2ª dobra */
+#beneficios .btn {
+    display: inline-block;
+    margin-top: 40px; /* Espaçamento acima do botão */
+    padding: 12px 30px;
+    color: #fff;
+    background-color: #00796B;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#beneficios .btn:hover {
+    background-color: #004D40;
+    transform: scale(1.05);
+}
+
 
 /* Estilo dos cartões de benefícios */
 .cards {
@@ -253,7 +276,7 @@ h2.titulo-espacado {
     margin-bottom: 20px;
     line-height: 1.6;
     color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .dobra3 h2 {
@@ -265,7 +288,6 @@ h2.titulo-espacado {
     background-color: #e2f1e1;
 }
 
-/* Ajuste no rodapé */
 footer {
     background-color: #333;
     color: #fff;
@@ -283,11 +305,10 @@ footer a:hover {
     color: #ffcc80;
 }
 
-/* Nova Seção: Black Friday */
 .black-friday {
     margin-top: 40px; /* Espaçamento acima da seção */
     padding: 40px 20px;
-    background-image: url('https://img.freepik.com/fotos-gratis/fundo-elegante-perfeito-para-black-friday_1361-3600.jpg'); /* Substitua pela URL da sua imagem */
+    background-image: url('https://i.pinimg.com/736x/b8/c7/2e/b8c72e052046e520c9852415c53406af.jpg'); /* Substitua pela URL da sua imagem */
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -317,13 +338,13 @@ footer a:hover {
     color: #ff0000; /* Vermelho */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
 .black-friday p {
     font-size: 1em;
     color: #ffffff; /* Vermelho */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Dobra 2, 4, e 6: Fundo com gradiente suave */
 .dobra2, .dobra-cinza, .dobra6 {
     background: linear-gradient(to bottom left, #ffffff, #35a7009d);
     padding: 60px 40px;
@@ -331,7 +352,7 @@ footer a:hover {
     border-radius: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Redes Sociais */
+
 .social-links a {
     color: #00796B;
     text-decoration: none;
@@ -342,4 +363,3 @@ footer a:hover {
 .social-links a:hover {
     color: #004D40;
 }
-
