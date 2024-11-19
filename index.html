@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    
     <link rel="stylesheet" type="text/css" href="sprayer.css" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,8 @@
         // Exibe a primeira dobra ao carregar
         document.querySelector('.dobra1').classList.add('aparecer');
     });
+
+    
 </script>
 
 <body>
@@ -128,17 +131,67 @@
     </section>
 
     <!-- 5ª Dobra: Prova Social -->
-    <section id="testemunhos" class="dobra">
-        <h2>Clientes Satisfeitos</h2>
-        <p>"Excelente serviço! Resultados visíveis na minha lavoura..."</p>
-        <p>"Tecnologia que trouxe mais segurança e eficiência."</p>
+    <section id="avaliacoes" class="dobra">
+        <h2>Avaliações dos Clientes</h2>
+        <div id="reviews-container">
+            <!-- Avaliações serão adicionadas aqui -->
+        </div>
+        <div class="botao-avalia-google" style="margin-top: 20px;">
+        <a href="https://www.google.com/maps/place/Sprayer+Drones+Pulveriza%C3%A7%C3%A3o+Agr%C3%ADcola/@-16.6975177,-49.277053,17z/data=!4m8!3m7!1s0xa6c4d65c3800e4ef:0x2b7b5b011ec10d4c!8m2!3d-16.6975177!4d-49.277053!9m1!1b1!16s%2Fg%2F11vcmr8x1_?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D" 
+           target="_blank" 
+           class="btn">
+            Veja todas avaliações
+        </a>
+        </div>
     </section>
+    <script>
+        // Dados das avaliações (adicionados manualmente)
+        const reviews = [
+            {
+                author: "João Silva",
+                rating: 5,
+                text: "Excelente atendimento! Fiquei muito satisfeito com o serviço."
+            },
+            {
+                author: "Maria Oliveira",
+                rating: 4,
+                text: "Ótimo lugar! Apenas achei que poderia ter mais opções no cardápio."
+            },
+            {
+                author: "Carlos Mendes",
+                rating: 5,
+                text: "Ambiente muito agradável e equipe super profissional. Recomendo!"
+            },
+            {
+                author: "Ana Pereira",
+                rating: 4.5,
+                text: "Gostei bastante, mas tive que esperar um pouco para ser atendida."
+            }
+        ];
+    
+        // Função para exibir as avaliações no site
+        const reviewsContainer = document.getElementById("reviews-container");
+    
+        reviews.forEach(review => {
+            const reviewCard = document.createElement("div");
+            reviewCard.classList.add("review-card");
+    
+            reviewCard.innerHTML = `
+              <h3>${review.author}</h3>
+              <p class="rating">⭐ ${review.rating}/5</p>
+              <p>${review.text}</p>
+            `;
+    
+            reviewsContainer.appendChild(reviewCard);
+        });
+    </script>
+    
 
     <!-- 6ª Dobra: CTA -->
     <section id="contato" class="dobra dobra-cinza">
         <div class="container">
             <h2>Deseja melhorar o rendimento e a qualidade da sua pulverização?</h2>
-            <a href="https://wa.me/5562998554057" class="btn">Fale Conosco</a>
+            <a href="https://wa.me/62998554057" class="btn">Fale Conosco</a>
             <div class="social-links">
                 <a href="https://www.instagram.com/sprayerdrones/">Instagram</a> | 
                 <a href="https://www.facebook.com/sprayerdronesbr?locale=pt_BR">Facebook</a>
