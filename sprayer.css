@@ -96,15 +96,16 @@ body {
 .btn {
     display: inline-block;
     padding: 14px 32px;
-    font-size: 1.1em;
-    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
     background-color: #00796B;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
@@ -321,10 +322,12 @@ footer a:hover {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+
 .black-friday.aparecer {
     opacity: 1; /* Visível após animação */
     transform: translateY(0); /* Posição final */
 }
+
 
 .black-friday h2 {
     font-size: 3em;
